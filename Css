@@ -1,0 +1,210 @@
+# Shopping.com
+<!DOCTYPE html>
+<head>
+    <title>SHOPPING</title>
+    <link rel="website icon" type="png" href="logo_shoping.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style>
+    body{
+        background-color: white;
+    }
+    .navbar{
+        background-color: #333;
+        overflow: rtl;
+    }
+    .navbar a{
+        float: right;
+        display: block;
+        color: rgb(160, 152, 152);
+        text-align: center;
+        padding: 14px 19px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s ;
+    }
+    .navbar a :hover{
+        background-color: #444;
+    }
+    
+    .search-box{
+        position: relative;
+        width: 150px;
+        top: 50px;
+        left: 650px;
+    }
+    .search-box input{
+        width: 380px;
+        padding: 10px 35px 10px 10px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 25px;
+        text-align: center;
+    }
+    .search-box.icon{
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        font-size: 18px;
+        color: #999;
+    }
+    .logo_shoping{
+        position: absolute;
+        top:8px;
+        left: 1060px;
+        width: 200px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8x rgba(0, 0, 0, 0.2);
+        
+    }
+    .menu-icon{
+        position: absolute;
+        top: 90px;
+        font-size: 28px;
+        padding: 15px;
+        cursor: pointer;
+        color: #333;
+    }
+    .side-menu{
+        position: fixed;
+        top: 0;
+        right: -250px ;
+        width: 250px ;
+        height: 100%;
+        background: #2c3e50;
+        color: white;
+        padding: 0px;
+        transition: 0.3s ease;
+        z-index: 1000;
+    }
+    .side-menu.active{
+        right: 0;
+    }
+    .side-menu a{
+        display: block;
+        color: white;
+        padding: 12px 0;
+        text-decoration: none;
+        border-bottom: 1px solid #444;
+    }
+    .side-menu a:hover{
+        background: #34495e;
+    }
+    .user-icon{
+        position: absolute;
+        top: 34px;
+        font-size: 28px;
+        padding: 70px;
+        cursor: pointer;
+        color: #333;
+    }
+    .user-menu{
+        position: absolute;
+        top: 0;
+        right: -250px ;
+        width: 250px ;
+        height: 100%;
+        background: #2c3e50;
+        color: white;
+        padding: 80px;
+        transition: 0.3s ease;
+        z-index: 1000;
+    }
+    .home-icon{
+        position: absolute;
+        top: -17px;
+        font-size: 28px;
+        padding: 120px;
+        cursor: pointer;
+        color: #333;
+    }
+    .home-menu{
+        position: absolute;
+        top: 0;
+        right: -250px ;
+        width: 250px ;
+        height: 100%;
+        background: #2c3e50;
+        color: white;
+        padding: 80px;
+        transition: 0.3s ease;
+        z-index: 1000;
+    }
+    .shopping-icon{
+        position: absolute;
+        top: -85px;
+        font-size: 28px;
+        padding: 190px;
+        cursor: pointer;
+        color: #333;
+    }
+    .shooping-menu{
+        position: absolute;
+        top: 0;
+        right: -250px ;
+        width: 250px ;
+        height: 100%;
+        background: #2c3e50;
+        color: white;
+        padding: 80px;
+        transition: 0.3s ease;
+        z-index: 1000;
+    }
+</style>
+<body>
+<div class="navbar">
+    <a href="#">الكل</a>
+    <a href="#">الرجال</a>
+    <a href="#">النساء</a>
+    <a href="#">الأجهزة</a>
+    <a href="#">مجوهرات</a>
+    <a href="#">رياضات</a>
+    <a href="#">صناعي </a>
+    <a href="#">الاطفال</a>
+    <a href="#">أكياس</a>
+    <a href="#">لعبة</a>
+    <a href="#">الحرف</a>
+    <a href="#">المنتجات المحافضة على الجمال</a>
+    <a href="#">السيارات</a>
+    <a href="#">حيوانات أليفة</a>
+    <a href="#">الكتب</a>
+<img src="logo_shoping.png" class="logo_shoping">
+</div>
+<dive class="search-box"><input type="search" placeholder="البحث في shoping">
+<i class="fas fa-search icon"></i>
+</dive>
+<div class="menu-icon" onclick="toggleMenu">
+<i class="fas fa-bars"></i>
+</div>
+<div class="side-menu" id="menu">
+    <a href="#">الرئيسية</a>
+    <a href="#">المنتجات</a>
+    <a href="#">الخدمات</a>
+    <a href="#">من نحن</a>
+    <a href="#">اتصل بنا</a>
+    <a href="#">حسابي</a>
+</div>  
+<script>
+    document.addEventListener("DOMContentloaded", function() {
+        const toggleBtn = document.getElementById("toggle-btn");
+        const menu = document.getElementById("menu");
+        toggleBtn.addEventListener("click", function() {
+            menu.classList.toggle("active");
+        });
+    });
+</script> 
+<div class="user-icon" onclick="toggleMenu">
+    <i class="fas fa-user"></i>
+</div>
+<div class="home-icon" onclick="toggleMenu">
+    <i class="fas fa-home"></i>
+</div>
+<div class="shopping-icon" onclick="toggleMenu">
+    <i class="fas fa-shopping-bag"></i>
+</div>
+
+</body>
+</html>
